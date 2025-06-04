@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>CarKey Mobile</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🔑 CarKey Mobile</div>
+    <nav>
+      <a href="#" onclick="switchLanguage('lt')">LT</a> |
+      <a href="#" onclick="switchLanguage('en')">EN</a> |
+      <a href="#" onclick="switchLanguage('ru')">RU</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about"></section>
+    <section id="services"></section>
+    <section id="prices"></section>
+    <section id="contact">
+      <form action="https://formspree.io/f/xblylrgd" method="POST">
+        <input type="text" name="name" placeholder="Vardas" required>
+        <input type="text" name="phone" placeholder="Telefono numeris" required>
+        <textarea name="message" placeholder="Komentaras ar klausimas..." required></textarea>
+        <button type="submit">Siųsti</button>
+      </form>
+    </section>
+  </main>
+  <footer>© 2025 CarKey Mobile</footer>
+</body>
+</html>

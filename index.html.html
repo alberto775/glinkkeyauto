@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarKey Mobile</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header, footer { background: #111; color: white; padding: 20px; text-align: center; }
+    nav a { margin: 0 15px; color: #ddd; text-decoration: none; font-weight: bold; }
+    .hero { padding: 60px 20px; text-align: center; background: #e3e3e3; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    .services, .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    .contact-form button { padding: 10px 20px; margin-top: 10px; background: #111; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .lang-switch { margin-top: 10px; }
+    .lang-switch button { margin: 0 5px; padding: 5px 10px; cursor: pointer; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      const langs = ['lt', 'ru', 'en'];
+      langs.forEach(l => {
+        document.querySelectorAll('[data-lang-' + l + ']').forEach(el => {
+          el.style.display = (l === lang) ? '' : 'none';
+        });
+      });
+    }
+    window.onload = () => {
+      const browserLang = navigator.language.slice(0, 2).toLowerCase();
+      const supported = ['lt', 'ru', 'en'];
+      switchLang(supported.includes(browserLang) ? browserLang : 'lt');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h2>CarKey Mobile</h2>
+    <nav>
+      <a href="#services">Paslaugos</a>
+      <a href="#prices">Kainos</a>
+      <a href="#contact">Kontaktai</a>
+    </nav>
+    <div class="lang-switch">
+      <button onclick="switchLang('lt')">LT</button>
+      <button onclick="switchLang('ru')">RU</button>
+      <button onclick="switchLang('en')">EN</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div data-lang-lt>
+      <h1>Mobilus automobilių raktų servisas</h1>
+      <p>Remontas, programavimas ir skubus iškvietimas visame Vilniuje</p>
+      <a href="tel:+37060421754"><button>📞 Skambinti dabar</button></a>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h1>Мобильный сервис автомобильных ключей</h1>
+      <p>Ремонт, программирование и срочный выезд по всему Вильнюсу</p>
+      <a href="tel:+37060421754"><button>📞 Позвонить сейчас</button></a>
+    </div>
+    <div data-lang-en style="display:none">
+      <h1>Mobile Car Key Service</h1>
+      <p>Repair, programming, and emergency call-out across Vilnius</p>
+      <a href="tel:+37060421754"><button>📞 Call Now</button></a>
+    </div>
+  </div>
+
+  <section id="services">
+    <div data-lang-lt>
+      <h2>Paslaugos</h2>
+      <div class="services">
+        <div class="card">🔑 Programavimas ir kopijavimas</div>
+        <div class="card">🔧 Korpuso ir mygtukų keitimas</div>
+        <div class="card">🚗 Avarinis atrakinimas</div>
+        <div class="card">🛠 Diagnostika ir lustų pririšimas</div>
+      </div>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h2>Услуги</h2>
+      <div class="services">
+        <div class="card">🔑 Программирование и копирование</div>
+        <div class="card">🔧 Замена корпуса и кнопок</div>
+        <div class="card">🚗 Аварийное открытие автомобиля</div>
+        <div class="card">🛠 Диагностика и привязка чипов</div>
+      </div>
+    </div>
+    <div data-lang-en style="display:none">
+      <h2>Services</h2>
+      <div class="services">
+        <div class="card">🔑 Programming and Duplication</div>
+        <div class="card">🔧 Case and Button Replacement</div>
+        <div class="card">🚗 Emergency Unlocking</div>
+        <div class="card">🛠 Diagnostics and Chip Pairing</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div data-lang-lt>
+      <h2>Kainoraštis</h2>
+      <div class="pricing">
+        <div class="card">Programavimas – nuo 30 €</div>
+        <div class="card">Korpuso keitimas – nuo 15 €</div>
+        <div class="card">Diagnostika – nemokamai</div>
+        <div class="card">Iškvietimas mieste – įskaičiuota</div>
+      </div>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h2>Цены</h2>
+      <div class="pricing">
+        <div class="card">Программирование – от 30 €</div>
+        <div class="card">Замена корпуса – от 15 €</div>
+        <div class="card">Диагностика – бесплатно</div>
+        <div class="card">Выезд по городу – включено</div>
+      </div>
+    </div>
+    <div data-lang-en style="display:none">
+      <h2>Pricing</h2>
+      <div class="pricing">
+        <div class="card">Programming – from €30</div>
+        <div class="card">Case replacement – from €15</div>
+        <div class="card">Diagnostics – free</div>
+        <div class="card">City call-out – included</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div data-lang-lt>
+      <h2>Apie mus</h2>
+      <p>Esame mobilus automobilių raktų servisas su ilgamete praktika automobilių elektronikos, litavimo ir imobilaizerių programavimo srityse. Atliekame greitus, kokybiškus ir sąžiningus darbus visame Vilniuje. Mūsų tikslas – grąžinti jums patogumą ir saugumą kuo greičiau, kada to labiausiai reikia.</p>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h2>О нас</h2>
+      <p>Мы — мобильный сервис по ремонту и программированию автомобильных ключей с многолетним опытом в автоэлектронике, пайке и работе с иммобилайзерами. Работаем быстро, качественно и честно по всему Вильнюсу. Наша цель — вернуть вам комфорт и безопасность в нужный момент.</p>
+    </div>
+    <div data-lang-en style="display:none">
+      <h2>About Us</h2>
+      <p>We are a mobile car key service with extensive experience in automotive electronics, soldering, and immobilizer programming. We operate quickly, reliably, and professionally throughout Vilnius. Our goal is to restore your convenience and security as fast as possible when you need it most.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontaktai / Contacts</h2>
+    <p><strong>Telefonas / Phone:</strong> <a href="tel:+37060421754">+37060421754</a><br>
+       <strong>El. paštas / Email:</strong> <a href="mailto:glinkautokey@gmail.com">glinkautokey@gmail.com</a></p>
+    <form class="contact-form">
+      <input type="text" placeholder="Vardas / Name" required>
+      <input type="tel" placeholder="Telefono numeris / Phone number" required>
+      <textarea placeholder="Komentaras ar klausimas... / Message or question..."></textarea>
+      <button type="submit">Siųsti / Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CarKey Mobile – Raktų remontas ir programavimas</p>
+  </footer>
+</body>
+</html>

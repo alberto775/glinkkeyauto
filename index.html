@@ -2,13 +2,19 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CarKey Mobile</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header, footer { background: #111; color: white; padding: 20px; text-align: center; }
+    nav button { margin: 0 5px; padding: 6px 12px; font-weight: bold; cursor: pointer; }
+    section { padding: 40px 20px; max-width: 800px; margin: auto; }
+    .ads { margin: 30px auto; text-align: center; }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"
      crossorigin="anonymous"></script>
-
 </head>
 <body>
   <header>
@@ -20,48 +26,49 @@
     </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <div data-lang-lt>
-        <h2>Apie mus</h2>
-        <p>Profesionalus automobilių raktų servisas Vilniuje</p>
-      </div>
-      <div data-lang-ru style="display:none">
-        <h2>О нас</h2>
-        <p>Профессиональный сервис по ключам в Вильнюсе</p>
-      </div>
-      <div data-lang-en style="display:none">
-        <h2>About Us</h2>
-        <p>Professional mobile car key service in Vilnius</p>
-      </div>
-    </section>
+  <section id="about">
+    <div data-lang-lt>
+      <h2>Apie mus</h2>
+      <p>Mobilus automobilių raktų servisas Vilniuje. Programavimas, remontas, avarinis atrakinimas.</p>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h2>О нас</h2>
+      <p>Мобильный сервис по автомобильным ключам в Вильнюсе. Программирование, ремонт, экстренное открытие.</p>
+    </div>
+    <div data-lang-en style="display:none">
+      <h2>About Us</h2>
+      <p>Mobile car key service in Vilnius. Programming, repair, emergency unlocking.</p>
+    </div>
+  </section>
 
-<!-- AdSense блок -->
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-client="ca-pub-1562374559003413"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </main>
+  <div class="ads">
+    <!-- Реклама внутри -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1562374559003413"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 
   <footer>
     <p>&copy; 2025 CarKey Mobile</p>
-  
-<!-- AdSense Footer Block -->
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-client="ca-pub-1562374559003413"
-     data-ad-slot="9876543210"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</footer>
+    <div class="ads">
+      <!-- Реклама в футере -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1562374559003413"
+           data-ad-slot="9876543210"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </footer>
 
   <script>
     function switchLang(lang) {

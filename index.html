@@ -1,12 +1,23 @@
 
 <!DOCTYPE html>
+
 <html lang="lt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CarKey Mobile</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <style>
+
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DN20DT3CPE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-DN20DT3CPE');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CarKey Mobile</title>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
     header, footer { background: #111; color: white; padding: 20px; text-align: center; }
     nav button { margin: 0 5px; padding: 6px 12px; font-weight: bold; cursor: pointer; }
@@ -16,144 +27,111 @@
     iframe { width: 100%; height: 300px; border: 0; margin-top: 30px; }
     ul { padding-left: 20px; }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"
-     crossorigin="anonymous"></script>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"></script>
 </head>
 <body>
-  <header>
-    <h1>CarKey Mobile</h1>
-    <nav>
-      <button onclick="switchLang('lt')">LT</button>
-      <button onclick="switchLang('ru')">RU</button>
-      <button onclick="switchLang('en')">EN</button>
-    </nav>
-  </header>
-
-  <section id="about">
-    <div data-lang-lt>
-      <h2>Apie mus</h2>
-      <p>Esame mobilus automobilių raktų servisas Vilniuje, teikiantis profesionalias paslaugas visų tipų automobilių raktams. Atliekame programavimą, kopijavimą, lusto pririšimą, avarinį atrakinimą bei korpuso keitimą. Dirbame greitai, patikimai ir atvykstame į vietą.</p>
-    </div>
-    <div data-lang-ru style="display:none">
-      <h2>О нас</h2>
-      <p>Мы — мобильный сервис по автомобильным ключам в Вильнюсе. Оказываем профессиональные услуги по программированию, копированию, замене корпусов, диагностике и экстренному вскрытию авто. Работаем быстро и выезжаем по месту.</p>
-    </div>
-    <div data-lang-en style="display:none">
-      <h2>About Us</h2>
-      <p>We are a mobile car key service based in Vilnius, offering professional solutions for all types of vehicle keys. We provide key programming, duplication, chip pairing, emergency unlocking, and case replacement. Fast response and on-site service guaranteed.</p>
-    </div>
-  </section>
-
-  <section id="services">
-    <div data-lang-lt>
-      <h2>Paslaugos</h2>
-      <ul>
-        <li>🔑 Programavimas ir kopijavimas</li>
-        <li>🔧 Korpuso keitimas</li>
-        <li>🚗 Avarinis atrakinimas</li>
-        <li>⚙️ Diagnostika ir lustų pririšimas</li>
-      </ul>
-    </div>
-    <div data-lang-ru style="display:none">
-      <h2>Услуги</h2>
-      <ul>
-        <li>🔑 Программирование и дублирование</li>
-        <li>🔧 Замена корпуса</li>
-        <li>🚗 Аварийное открытие</li>
-        <li>⚙️ Диагностика и привязка чипов</li>
-      </ul>
-    </div>
-    <div data-lang-en style="display:none">
-      <h2>Services</h2>
-      <ul>
-        <li>🔑 Programming and Duplication</li>
-        <li>🔧 Case and Button Replacement</li>
-        <li>🚗 Emergency Unlocking</li>
-        <li>⚙️ Diagnostics and Chip Pairing</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div data-lang-lt>
-      <h2>Kainoraštis</h2>
-      <ul>
-        <li>Programavimas – nuo 30 €</li>
-        <li>Korpuso keitimas – nuo 15 €</li>
-        <li>Diagnostika – nemokamai</li>
-        <li>Iškvietimas mieste – įskaičiuota</li>
-      </ul>
-    </div>
-    <div data-lang-ru style="display:none">
-      <h2>Цены</h2>
-      <ul>
-        <li>Программирование – от 30 €</li>
-        <li>Замена корпуса – от 15 €</li>
-        <li>Диагностика – бесплатно</li>
-        <li>Выезд по городу – включено</li>
-      </ul>
-    </div>
-    <div data-lang-en style="display:none">
-      <h2>Pricing</h2>
-      <ul>
-        <li>Programming – from €30</li>
-        <li>Case replacement – from €15</li>
-        <li>Diagnostics – free</li>
-        <li>City call out – included</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="call-btn">
-    <a href="tel:+37060000000">📞 Skambinti dabar / Call Now</a>
-  </div>
-
-  <div class="ads">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-1562374559003413"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<div style="text-align:center; color:gray; font-size:14px;">Здесь будет реклама от Google</div>
-<script></script>
-  </div>
-
-  <iframe src="https://maps.google.com/maps?q=Vilnius&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
-  
-<!-- AdSense Fixed Bottom Banner -->
-<div style="width: 100%; text-align: center; margin-top: 40px;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1562374559003413"
-       data-ad-slot="1928374650"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+<header>
+<h1>CarKey Mobile</h1>
+<nav>
+<button onclick="switchLang('lt')">LT</button>
+<button onclick="switchLang('ru')">RU</button>
+<button onclick="switchLang('en')">EN</button>
+</nav>
+</header>
+<section id="about">
+<div data-lang-lt="">
+<h2>Apie mus</h2>
+<p>Esame mobilus automobilių raktų servisas Vilniuje, teikiantis profesionalias paslaugas visų tipų automobilių raktams. Atliekame programavimą, kopijavimą, lusto pririšimą, avarinį atrakinimą bei korpuso keitimą. Dirbame greitai, patikimai ir atvykstame į vietą.</p>
 </div>
-
-<footer>
-    <p>&copy; 2025 CarKey Mobile</p>
-    <div class="ads">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-1562374559003413"
-           data-ad-slot="9876543210"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});
+<div data-lang-ru="" style="display:none">
+<h2>О нас</h2>
+<p>Мы — мобильный сервис по автомобильным ключам в Вильнюсе. Оказываем профессиональные услуги по программированию, копированию, замене корпусов, диагностике и экстренному вскрытию авто. Работаем быстро и выезжаем по месту.</p>
+</div>
+<div data-lang-en="" style="display:none">
+<h2>About Us</h2>
+<p>We are a mobile car key service based in Vilnius, offering professional solutions for all types of vehicle keys. We provide key programming, duplication, chip pairing, emergency unlocking, and case replacement. Fast response and on-site service guaranteed.</p>
+</div>
+</section>
+<section id="services">
+<div data-lang-lt="">
+<h2>Paslaugos</h2>
+<ul>
+<li>🔑 Programavimas ir kopijavimas</li>
+<li>🔧 Korpuso keitimas</li>
+<li>🚗 Avarinis atrakinimas</li>
+<li>⚙️ Diagnostika ir lustų pririšimas</li>
+</ul>
+</div>
+<div data-lang-ru="" style="display:none">
+<h2>Услуги</h2>
+<ul>
+<li>🔑 Программирование и дублирование</li>
+<li>🔧 Замена корпуса</li>
+<li>🚗 Аварийное открытие</li>
+<li>⚙️ Диагностика и привязка чипов</li>
+</ul>
+</div>
+<div data-lang-en="" style="display:none">
+<h2>Services</h2>
+<ul>
+<li>🔑 Programming and Duplication</li>
+<li>🔧 Case and Button Replacement</li>
+<li>🚗 Emergency Unlocking</li>
+<li>⚙️ Diagnostics and Chip Pairing</li>
+</ul>
+</div>
+</section>
+<section id="pricing">
+<div data-lang-lt="">
+<h2>Kainoraštis</h2>
+<ul>
+<li>Programavimas – nuo 30 €</li>
+<li>Korpuso keitimas – nuo 15 €</li>
+<li>Diagnostika – nemokamai</li>
+<li>Iškvietimas mieste – įskaičiuota</li>
+</ul>
+</div>
+<div data-lang-ru="" style="display:none">
+<h2>Цены</h2>
+<ul>
+<li>Программирование – от 30 €</li>
+<li>Замена корпуса – от 15 €</li>
+<li>Диагностика – бесплатно</li>
+<li>Выезд по городу – включено</li>
+</ul>
+</div>
+<div data-lang-en="" style="display:none">
+<h2>Pricing</h2>
+<ul>
+<li>Programming – from €30</li>
+<li>Case replacement – from €15</li>
+<li>Diagnostics – free</li>
+<li>City call out – included</li>
+</ul>
+</div>
+</section>
+<div class="call-btn">
+<a href="tel:+37060000000">📞 Skambinti dabar / Call Now</a>
+</div>
+<div class="ads">
+<ins class="adsbygoogle" data-ad-client="ca-pub-1562374559003413" data-ad-format="auto" data-ad-slot="1234567890" data-full-width-responsive="true" style="display:block"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <div style="text-align:center; color:gray; font-size:14px;">Здесь будет реклама от Google</div>
 <script></script>
-    </div>
-  </footer>
-
-  <script>
+</div>
+<iframe src="https://maps.google.com/maps?q=Vilnius&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+<footer>
+<p>© 2025 CarKey Mobile</p>
+<div class="ads">
+<ins class="adsbygoogle" data-ad-client="ca-pub-1562374559003413" data-ad-format="auto" data-ad-slot="9876543210" data-full-width-responsive="true" style="display:block"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div style="text-align:center; color:gray; font-size:14px;">Здесь будет реклама от Google</div>
+<script></script>
+</div>
+</footer>
+<script>
     function switchLang(lang) {
       const langs = ['lt', 'ru', 'en'];
       langs.forEach(l => {

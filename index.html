@@ -11,7 +11,10 @@
     header, footer { background: #111; color: white; padding: 20px; text-align: center; }
     nav button { margin: 0 5px; padding: 6px 12px; font-weight: bold; cursor: pointer; }
     section { padding: 40px 20px; max-width: 800px; margin: auto; }
-    .ads { margin: 30px auto; text-align: center; }
+    .ads, .call-btn { margin: 30px auto; text-align: center; }
+    .call-btn a { background: red; color: white; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 6px; }
+    iframe { width: 100%; height: 300px; border: 0; margin-top: 30px; }
+    ul { padding-left: 20px; }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"
      crossorigin="anonymous"></script>
@@ -33,7 +36,7 @@
     </div>
     <div data-lang-ru style="display:none">
       <h2>О нас</h2>
-      <p>Мобильный сервис по автомобильным ключам в Вильнюсе. Программирование, ремонт, экстренное открытие.</p>
+      <p>Мобильный сервис по авто ключам в Вильнюсе. Программирование, ремонт, аварийное открытие.</p>
     </div>
     <div data-lang-en style="display:none">
       <h2>About Us</h2>
@@ -41,32 +44,92 @@
     </div>
   </section>
 
+  <section id="services">
+    <div data-lang-lt>
+      <h2>Paslaugos</h2>
+      <ul>
+        <li>🔑 Programavimas ir kopijavimas</li>
+        <li>🔧 Korpuso keitimas</li>
+        <li>🚗 Avarinis atrakinimas</li>
+        <li>⚙️ Diagnostika ir lustų pririšimas</li>
+      </ul>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h2>Услуги</h2>
+      <ul>
+        <li>🔑 Программирование и дублирование</li>
+        <li>🔧 Замена корпуса</li>
+        <li>🚗 Аварийное открытие</li>
+        <li>⚙️ Диагностика и привязка чипов</li>
+      </ul>
+    </div>
+    <div data-lang-en style="display:none">
+      <h2>Services</h2>
+      <ul>
+        <li>🔑 Programming and Duplication</li>
+        <li>🔧 Case and Button Replacement</li>
+        <li>🚗 Emergency Unlocking</li>
+        <li>⚙️ Diagnostics and Chip Pairing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div data-lang-lt>
+      <h2>Kainoraštis</h2>
+      <ul>
+        <li>Programavimas – nuo 30 €</li>
+        <li>Korpuso keitimas – nuo 15 €</li>
+        <li>Diagnostika – nemokamai</li>
+        <li>Iškvietimas mieste – įskaičiuota</li>
+      </ul>
+    </div>
+    <div data-lang-ru style="display:none">
+      <h2>Цены</h2>
+      <ul>
+        <li>Программирование – от 30 €</li>
+        <li>Замена корпуса – от 15 €</li>
+        <li>Диагностика – бесплатно</li>
+        <li>Выезд по городу – включено</li>
+      </ul>
+    </div>
+    <div data-lang-en style="display:none">
+      <h2>Pricing</h2>
+      <ul>
+        <li>Programming – from €30</li>
+        <li>Case replacement – from €15</li>
+        <li>Diagnostics – free</li>
+        <li>City call out – included</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="call-btn">
+    <a href="tel:+37060000000">📞 Skambinti dabar / Call Now</a>
+  </div>
+
   <div class="ads">
-    <!-- Реклама внутри -->
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1562374559003413"
          data-ad-slot="1234567890"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
+
+  <iframe src="https://maps.google.com/maps?q=Vilnius&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
   <footer>
     <p>&copy; 2025 CarKey Mobile</p>
     <div class="ads">
-      <!-- Реклама в футере -->
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-1562374559003413"
            data-ad-slot="9876543210"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   </footer>
 

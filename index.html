@@ -52,6 +52,24 @@
     font-size: 14px;
   }
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 210px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: none;
+  z-index: 9999;
+}
+.back-to-top:hover {
+  background: #000;
+}
 </style>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DN20DT3CPE"></script><script>
@@ -93,6 +111,19 @@
 }
 .sticky-call:hover {
   background-color: #cc0000;
+}
+</style><style>
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+body.dark-mode header, body.dark-mode footer {
+  background: #222;
+  color: #fff;
+}
+body.dark-mode .back-to-top {
+  background: #eee;
+  color: #000;
 }
 </style></head>
 <body>
@@ -264,6 +295,32 @@
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', function() {
     setTimeout(() => alert('✅ Jūsų žinutė išsiųsta!\nYour message has been sent!'), 100);
+  });
+});
+</script><a class="back-to-top" href="#">↑</a><button id="darkModeToggle" style="position:fixed;bottom:150px;right:20px;z-index:9999;padding:10px;border:none;border-radius:8px;background:#444;color:white;font-weight:bold;cursor:pointer;">🌓</button><div id="formNotif" style="display:none;position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#4caf50;color:white;padding:15px 25px;border-radius:8px;font-weight:bold;z-index:9999;box-shadow:0 4px 10px rgba(0,0,0,0.3);">✅ Jūsų žinutė išsiųsta!</div><script>
+// Back to top logic
+window.onscroll = function() {
+  document.querySelector('.back-to-top').style.display = window.scrollY > 300 ? 'block' : 'none';
+};
+
+// Dark mode toggle
+const toggle = document.getElementById("darkModeToggle");
+toggle.onclick = () => {
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+};
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark-mode");
+}
+
+// Form notification instead of alert
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', function() {
+    setTimeout(() => {
+      const notif = document.getElementById('formNotif');
+      notif.style.display = 'block';
+      setTimeout(() => notif.style.display = 'none', 3000);
+    }, 100);
   });
 });
 </script></body>

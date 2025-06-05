@@ -27,7 +27,12 @@
     ul { padding-left: 20px; }
   </style>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1562374559003413"></script>
-</head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DN20DT3CPE"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DN20DT3CPE');
+</script></head>
 <body>
 <header>
 <h1>CarKey Mobile</h1>
@@ -39,57 +44,6 @@
 </header>
 <section id="about">
 <div data-lang-lt="">
-<section class="contact-form" style="margin-top: 40px;">
-<h2>Susisiekite su mumis</h2>
-<form action="https://formspree.io/f/xblylrgd" method="POST">
-<label>Vardas:</label><br/>
-<input name="name" required="" type="text"/><br/>
-<label>El. paštas:</label><br/>
-<input name="email" required="" type="email"/><br/>
-<label>Telefonas:</label><br/>
-<input name="phone" type="text"/><br/>
-<label>Žinutė:</label><br/>
-<textarea name="message" required="" rows="4"></textarea><br/>
-<button style="margin-top:10px;background:red;color:white;padding:10px 25px;border:none;" type="submit">
-        Siųsti
-      </button>
-</form>
-</section>
-</div>
-<div data-lang="ru">
-<section class="contact-form" style="margin-top: 40px;">
-<h2>Свяжитесь с нами</h2>
-<form action="https://formspree.io/f/xblylrgd" method="POST">
-<label>Имя:</label><br/>
-<input name="name" required="" type="text"/><br/>
-<label>Эл. почта:</label><br/>
-<input name="email" required="" type="email"/><br/>
-<label>Телефон:</label><br/>
-<input name="phone" type="text"/><br/>
-<label>Сообщение:</label><br/>
-<textarea name="message" required="" rows="4"></textarea><br/>
-<button style="margin-top:10px;background:red;color:white;padding:10px 25px;border:none;" type="submit">
-      Отправить
-    </button>
-</form>
-</section>
-<div data-lang="en">
-<section class="contact-form" style="margin-top: 40px;">
-<h2>Contact Us</h2>
-<form action="https://formspree.io/f/xblylrgd" method="POST">
-<label>Name:</label><br/>
-<input name="name" required="" type="text"/><br/>
-<label>Email:</label><br/>
-<input name="email" required="" type="email"/><br/>
-<label>Phone:</label><br/>
-<input name="phone" type="text"/><br/>
-<label>Message:</label><br/>
-<textarea name="message" required="" rows="4"></textarea><br/>
-<button style="margin-top:10px;background:red;color:white;padding:10px 25px;border:none;" type="submit">
-      Send
-    </button>
-</form>
-</section>
 <h2>Apie mus</h2>
 <p>Esame mobilus automobilių raktų servisas Vilniuje, teikiantis profesionalias paslaugas visų tipų automobilių raktams. Atliekame programavimą, kopijavimą, lusto pririšimą, avarinį atrakinimą bei korpuso keitimą. Dirbame greitai, patikimai ir atvykstame į vietą.</p>
 </div>
@@ -101,7 +55,7 @@
 <h2>About Us</h2>
 <p>We are a mobile car key service based in Vilnius, offering professional solutions for all types of vehicle keys. We provide key programming, duplication, chip pairing, emergency unlocking, and case replacement. Fast response and on-site service guaranteed.</p>
 </div>
-</div></section>
+</section>
 <section id="services">
 <div data-lang-lt="">
 <h2>Paslaugos</h2>
@@ -182,13 +136,19 @@
 </div>
 </footer>
 <script>
-function switchLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
-    });
-}
-window.addEventListener('DOMContentLoaded', () => {
-    switchLang('lt'); // По умолчанию литовский
-});
-</script></body>
+    function switchLang(lang) {
+      const langs = ['lt', 'ru', 'en'];
+      langs.forEach(l => {
+        document.querySelectorAll('[data-lang-' + l + ']').forEach(el => {
+          el.style.display = (l === lang) ? '' : 'none';
+        });
+      });
+    }
+    window.onload = () => {
+      const browserLang = navigator.language.slice(0, 2).toLowerCase();
+      const supported = ['lt', 'ru', 'en'];
+      switchLang(supported.includes(browserLang) ? browserLang : 'lt');
+    };
+  </script>
+</body>
 </html>

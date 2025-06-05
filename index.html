@@ -4,7 +4,7 @@
 <html lang="lt">
 <head>
 <!-- Google Analytics -->
-
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DN20DT3CPE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
@@ -150,5 +150,73 @@
       switchLang(supported.includes(browserLang) ? browserLang : 'lt');
     };
   </script>
+
+<section id="contact">
+  <div class="lang-buttons">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+    <button onclick="setLang('lt')">LT</button>
+  </div>
+  <h2 id="form-title">Contact Us</h2>
+
+  <form action="https://formspree.io/f/xblylrgd" method="POST">
+    <label id="name-label">Name:
+      <input type="text" name="name" required>
+    </label>
+
+    <label id="phone-label">Phone:
+      <input type="tel" name="phone">
+    </label>
+
+    <label id="email-label">Email:
+      <input type="email" name="email" required>
+    </label>
+
+    <label id="msg-label">Message:
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+
+    <button type="submit" id="submit-btn">Send</button>
+  </form>
+</section>
+
+<script>
+  const translations = {
+    en: {
+      title: "Contact Us",
+      name: "Name:",
+      phone: "Phone:",
+      email: "Email:",
+      message: "Message:",
+      submit: "Send"
+    },
+    ru: {
+      title: "Обратная связь",
+      name: "Имя:",
+      phone: "Телефон:",
+      email: "E-mail:",
+      message: "Сообщение:",
+      submit: "Отправить"
+    },
+    lt: {
+      title: "Susisiekite su mumis",
+      name: "Vardas:",
+      phone: "Telefonas:",
+      email: "El. paštas:",
+      message: "Žinutė:",
+      submit: "Siųsti"
+    }
+  };
+
+  function setLang(lang) {
+    document.getElementById("form-title").innerText = translations[lang].title;
+    document.getElementById("name-label").innerText = translations[lang].name;
+    document.getElementById("phone-label").innerText = translations[lang].phone;
+    document.getElementById("email-label").innerText = translations[lang].email;
+    document.getElementById("msg-label").innerText = translations[lang].message;
+    document.getElementById("submit-btn").innerText = translations[lang].submit;
+  }
+</script>
+
 </body>
 </html>

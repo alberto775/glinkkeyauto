@@ -17,7 +17,7 @@
 <title>CarKey Mobile</title>
 <link href="favicon.png" rel="icon" type="image/png"/>
 <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
     header, footer { background: #111; color: white; padding: 20px; text-align: center; }
     nav button { margin: 0 5px; padding: 6px 12px; font-weight: bold; cursor: pointer; }
     section { padding: 40px 20px; max-width: 800px; margin: auto; }
@@ -49,6 +49,23 @@
 }
 .sticky-telegram:hover {
   background-color: #0077b3;
+}
+</style><link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/><style>
+.sticky-call {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #e60000;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+.sticky-call:hover {
+  background-color: #cc0000;
 }
 </style></head>
 <body>
@@ -178,6 +195,7 @@
 </div><iframe src="https://maps.google.com/maps?q=Vilnius&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
 <script>
     function switchLang(lang) {
+  localStorage.setItem('lang', lang);
       const langs = ['lt', 'ru', 'en'];
       langs.forEach(l => {
         document.querySelectorAll('[data-lang-' + l + ']').forEach(el => {
@@ -186,9 +204,10 @@
       });
     }
     window.onload = () => {
+  const savedLang = localStorage.getItem('lang');
       const browserLang = navigator.language.slice(0, 2).toLowerCase();
       const supported = ['lt', 'ru', 'en'];
-      switchLang(supported.includes(browserLang) ? browserLang : 'lt');
+      switchLang(savedLang || (supported.includes(browserLang) ? browserLang : 'lt'));
     };
   </script>
 <footer style="text-align:center; padding:20px; background:#f2f2f2; margin-top:40px;; color:#000">
@@ -214,5 +233,11 @@
 <p>🕒 Working hours: 10:00 – 20:00</p>
 </div>
 </footer>
-<a class="sticky-telegram" href="https://t.me/glinkautokey" target="_blank">💬 Telegram</a></body>
+<a class="sticky-telegram" href="https://t.me/glinkautokey" target="_blank">💬 Telegram</a><a class="sticky-call" href="tel:+37060421754">📞 Call</a><script>
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', function() {
+    setTimeout(() => alert('✅ Jūsų žinutė išsiųsta!\nYour message has been sent!'), 100);
+  });
+});
+</script></body>
 </html>

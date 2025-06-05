@@ -145,34 +145,76 @@
       switchLang(supported.includes(browserLang) ? browserLang : 'lt');
     };
   </script>
-
-<section id="contact" style="padding: 40px; max-width: 600px; margin: auto;">
-<h2 class="lang" data-lang="lt">Susisiekite su mumis</h2>
-<h2 class="lang" data-lang="ru" style="display:none;">Связаться с нами</h2>
-<h2 class="lang" data-lang="en" style="display:none;">Contact Us</h2>
-<form action="https://formspree.io/f/xblylrgd" method="POST">
-<label class="lang" data-lang="lt">Vardas:</label>
-<label class="lang" data-lang="ru" style="display:none;">Имя:</label>
-<label class="lang" data-lang="en" style="display:none;">Name:</label>
-<input name="name" required="" style="width: 100%; padding: 10px; margin-bottom: 10px;" type="text"/>
-<label class="lang" data-lang="lt">El. paštas:</label>
-<label class="lang" data-lang="ru" style="display:none;">Электронная почта:</label>
-<label class="lang" data-lang="en" style="display:none;">Email:</label>
-<input name="email" required="" style="width: 100%; padding: 10px; margin-bottom: 10px;" type="email"/>
-<label class="lang" data-lang="lt">Telefonas:</label>
-<label class="lang" data-lang="ru" style="display:none;">Телефон:</label>
-<label class="lang" data-lang="en" style="display:none;">Phone:</label>
-<input name="phone" required="" style="width: 100%; padding: 10px; margin-bottom: 10px;" type="tel"/>
-<label class="lang" data-lang="lt">Žinutė:</label>
-<label class="lang" data-lang="ru" style="display:none;">Сообщение:</label>
-<label class="lang" data-lang="en" style="display:none;">Message:</label>
-<textarea name="message" required="" style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
-<button style="padding: 10px 20px; background-color: red; color: white; border: none; cursor: pointer;" type="submit">
-<span class="lang" data-lang="lt">Siųsti</span>
-<span class="lang" data-lang="ru" style="display:none;">Отправить</span>
-<span class="lang" data-lang="en" style="display:none;">Send</span>
-</button>
+<section class="contact-form">
+<h2>Susisiekite su mumis</h2>
+<form action="https://formspree.io/f/xblylrgd" id="form-lt" method="POST" style="display: none;">
+<label>Vardas:<br/>
+<input name="name" required="" type="text"/>
+</label><br/>
+<label>El. paštas:<br/>
+<input name="email" required="" type="email"/>
+</label><br/>
+<label>Telefonas:<br/>
+<input name="phone" type="text"/>
+</label><br/>
+<label>Žinutė:<br/>
+<textarea name="message" required="" rows="4"></textarea>
+</label><br/>
+<button style="background:red;color:white;padding:6px 20px;border:none;" type="submit">Siųsti</button>
 </form>
 </section>
-</body>
+<section class="contact-form">
+<h2>Свяжитесь с нами</h2>
+<form action="https://formspree.io/f/xblylrgd" id="form-ru" method="POST" style="display: none;">
+<label>Имя:<br/>
+<input name="name" required="" type="text"/>
+</label><br/>
+<label>Эл. почта:<br/>
+<input name="email" required="" type="email"/>
+</label><br/>
+<label>Телефон:<br/>
+<input name="phone" type="text"/>
+</label><br/>
+<label>Сообщение:<br/>
+<textarea name="message" required="" rows="4"></textarea>
+</label><br/>
+<button style="background:red;color:white;padding:6px 20px;border:none;" type="submit">Отправить</button>
+</form>
+</section>
+<section class="contact-form">
+<h2>Contact Us</h2>
+<form action="https://formspree.io/f/xblylrgd" id="form-en" method="POST" style="display: none;">
+<label>Name:<br/>
+<input name="name" required="" type="text"/>
+</label><br/>
+<label>Email:<br/>
+<input name="email" required="" type="email"/>
+</label><br/>
+<label>Phone:<br/>
+<input name="phone" type="text"/>
+</label><br/>
+<label>Message:<br/>
+<textarea name="message" required="" rows="4"></textarea>
+</label><br/>
+<button style="background:red;color:white;padding:6px 20px;border:none;" type="submit">Send</button>
+</form>
+</section>
+<script>
+function showForm(lang) {
+    const langs = ['lt', 'ru', 'en'];
+    langs.forEach(l => {
+        document.getElementById('form-' + l).style.display = (l === lang) ? 'block' : 'none';
+    });
+}
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll("button[data-lang]");
+    buttons.forEach(btn => {
+        btn.addEventListener("click", function() {
+            const selectedLang = this.getAttribute("data-lang").toLowerCase();
+            showForm(selectedLang);
+        });
+    });
+    showForm('lt'); // По умолчанию
+});
+</script></body>
 </html>

@@ -3,6 +3,7 @@
 
 <html lang="lt">
 <head>
+
 <!-- Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DN20DT3CPE"></script>
 <script>
@@ -32,9 +33,9 @@
 <header>
 <h1>CarKey Mobile</h1>
 <nav>
-<button onclick="switchLang('lt')">LT</button>
-<button onclick="switchLang('ru')">RU</button>
-<button onclick="switchLang('en')">EN</button>
+<button onclick="switchLang('lt')" id="lt-btn">LT</button>
+<button onclick="switchLang('ru')" id="ru-btn">RU</button>
+<button onclick="switchLang('en')" id="en-btn">EN</button>
 </nav>
 </header>
 <section id="about">
@@ -145,76 +146,23 @@
       switchLang(supported.includes(browserLang) ? browserLang : 'lt');
     };
   </script>
-<section class="contact-form">
-<h2>Susisiekite su mumis</h2>
-<form action="https://formspree.io/f/xblylrgd" id="form-lt" method="POST" style="display: none;">
-<label>Vardas:<br/>
-<input name="name" required="" type="text"/>
-</label><br/>
-<label>El. paštas:<br/>
-<input name="email" required="" type="email"/>
-</label><br/>
-<label>Telefonas:<br/>
-<input name="phone" type="text"/>
-</label><br/>
-<label>Žinutė:<br/>
-<textarea name="message" required="" rows="4"></textarea>
-</label><br/>
-<button style="background:red;color:white;padding:6px 20px;border:none;" type="submit">Siųsti</button>
-</form>
-</section>
-<section class="contact-form">
-<h2>Свяжитесь с нами</h2>
-<form action="https://formspree.io/f/xblylrgd" id="form-ru" method="POST" style="display: none;">
-<label>Имя:<br/>
-<input name="name" required="" type="text"/>
-</label><br/>
-<label>Эл. почта:<br/>
-<input name="email" required="" type="email"/>
-</label><br/>
-<label>Телефон:<br/>
-<input name="phone" type="text"/>
-</label><br/>
-<label>Сообщение:<br/>
-<textarea name="message" required="" rows="4"></textarea>
-</label><br/>
-<button style="background:red;color:white;padding:6px 20px;border:none;" type="submit">Отправить</button>
-</form>
-</section>
-<section class="contact-form">
-<h2>Contact Us</h2>
-<form action="https://formspree.io/f/xblylrgd" id="form-en" method="POST" style="display: none;">
-<label>Name:<br/>
-<input name="name" required="" type="text"/>
-</label><br/>
-<label>Email:<br/>
-<input name="email" required="" type="email"/>
-</label><br/>
-<label>Phone:<br/>
-<input name="phone" type="text"/>
-</label><br/>
-<label>Message:<br/>
-<textarea name="message" required="" rows="4"></textarea>
-</label><br/>
-<button style="background:red;color:white;padding:6px 20px;border:none;" type="submit">Send</button>
-</form>
-</section>
+
 <script>
 function showForm(lang) {
-    const langs = ['lt', 'ru', 'en'];
-    langs.forEach(l => {
-        document.getElementById('form-' + l).style.display = (l === lang) ? 'block' : 'none';
-    });
+  const forms = document.querySelectorAll('.contact-form');
+  forms.forEach(form => form.style.display = 'none');
+  const activeForm = document.querySelector('.contact-form.' + lang);
+  if (activeForm) activeForm.style.display = 'block';
 }
+
+// Automatically show LT form on load
 document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll("button[data-lang]");
-    buttons.forEach(btn => {
-        btn.addEventListener("click", function() {
-            const selectedLang = this.getAttribute("data-lang").toLowerCase();
-            showForm(selectedLang);
-        });
-    });
-    showForm('lt'); // По умолчанию
+  showForm('lt');
+  document.getElementById("lt-btn").addEventListener("click", () => showForm("lt"));
+  document.getElementById("ru-btn").addEventListener("click", () => showForm("ru"));
+  document.getElementById("en-btn").addEventListener("click", () => showForm("en"));
 });
-</script></body>
+</script>
+
+</body>
 </html>
